@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box; font-family:'Inter', sans-serif;}
+    body {background:#f9fafb; color:#111827; line-height:1.6;}
+    header {background:#4f46e5; color:#fff; padding:20px 50px; display:flex; justify-content:space-between; align-items:center;}
+    header h1 {font-size:1.5rem;}
+    nav ul {list-style:none; display:flex; gap:20px;}
+    nav a {text-decoration:none; color:white; font-weight:600;}
+    .hero {text-align:center; padding:80px 20px; background:linear-gradient(135deg,#6366f1,#a78bfa); color:white;}
+    .hero h2 {font-size:2.5rem; margin-bottom:20px;}
+    .hero p {font-size:1.1rem; margin-bottom:25px;}
+    .hero a {background:white; color:#4f46e5; padding:12px 24px; border-radius:8px; text-decoration:none; font-weight:600;}
+    section {padding:60px 50px;}
+    .features {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;}
+    .card {background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:20px; box-shadow:0 4px 12px rgba(0,0,0,0.05);}
+    .card h3 {margin-bottom:10px; color:#4f46e5;}
+    footer {background:#1f2937; color:#9ca3af; text-align:center; padding:20px;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Landing Page</h1>
+    <nav>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to My Landing Page</h2>
+    <p>A simple and beautiful landing page created with HTML & CSS.</p>
+    <a href="#">Get Started</a>
+  </section>
+
+  <section id="features">
+    <h2 style="text-align:center; margin-bottom:30px;">Features</h2>
+    <div class="features">
+      <div class="card">
+        <h3>Responsive</h3>
+        <p>Designed to adapt across devices and screen sizes.</p>
+      </div>
+      <div class="card">
+        <h3>Clean Design</h3>
+        <p>Minimal and visually appealing sections to engage users.</p>
+      </div>
+      <div class="card">
+        <h3>Easy to Edit</h3>
+        <p>Simple HTML and CSS structure that’s beginner-friendly.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 style="text-align:center; margin-bottom:20px;">About</h2>
+    <p style="max-width:700px; margin:auto; text-align:center;">
+      This landing page project is perfect for beginners. It helps practice structuring content into sections, aligning elements, and applying CSS styling while encouraging creativity.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2 style="text-align:center; margin-bottom:20px;">Contact</h2>
+    <p style="text-align:center;">Email: <a href="mailto:demo@example.com">demo@example.com</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 My Landing Page | All rights reserved</p>
+  </footer>
+</body>
+</html>
