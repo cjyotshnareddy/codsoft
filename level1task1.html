@@ -1,1 +1,207 @@
-
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #FBFBFD;
+      --card: #FFFFFF;
+      --accent: linear-gradient(135deg,#f6d365 0%, #fda085 100%);
+      --muted:#6b7280;
+      --pastel-1:#DDEAF6;
+      --pastel-2:#F6E8FF;
+      --border:#E6E9F2;
+      --glass: rgba(255,255,255,0.6);
+      --radius: 14px;
+      --max-width:1100px;
+      font-family: 'Inter', sans-serif;
+    }
+    body{background:var(--bg); margin:0; color:#0f172a}
+    .page-border{max-width:var(--max-width); margin:28px auto; padding:28px; background:var(--glass); border:1px solid var(--border); border-radius:18px; box-shadow:0 8px 30px rgba(16,24,40,0.06)}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:var(--pastel-1);display:grid;place-items:center;font-weight:700}
+    .name{font-size:1.1rem;font-weight:700}
+    .tag{color:var(--muted);font-size:0.9rem}
+    nav ul{display:flex;gap:14px;list-style:none;padding:0;margin:0}
+    nav a{text-decoration:none;color:inherit;font-weight:600}
+    .cta{background:var(--pastel-2);padding:8px 12px;border-radius:10px}
+    .hamburger{display:none;background:none;border:0;font-size:22px}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;margin-top:28px}
+    .intro h1{font-size:2.1rem;margin:0}
+    .intro p{color:var(--muted);margin-top:12px}
+    .profile-card{background:var(--card);border-radius:14px;padding:18px;border:1px solid var(--border);text-align:center}
+    .profile-img{width:160px;height:160px;border-radius:16px;object-fit:cover;border:6px solid white;box-shadow:0 8px 20px rgba(16,24,40,0.06)}
+    section{margin-top:28px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);padding:16px;border-radius:12px;border:1px solid var(--border)}
+    .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .project-img{height:140px;width:100%;border-radius:10px;object-fit:cover;background:#f3f4f6}
+    .contact-grid{display:grid;grid-template-columns:1fr 360px;gap:18px}
+    form input, form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid var(--border);margin-top:8px}
+    form button{margin-top:12px;padding:10px 14px;border-radius:8px;border:0;background:var(--accent);color:white;font-weight:700}
+    footer{margin-top:28px;padding-top:12px;border-top:1px dashed var(--border);display:flex;justify-content:space-between;align-items:center}
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .projects-grid{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:640px){
+      .hamburger{display:inline-block}
+      nav ul{display:none}
+      .page-border{margin:12px}
+      .grid-3{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+    }
+    .muted{color:var(--muted)}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid var(--border);background:white}
+  </style>
+</head>
+<body>
+  <div class="page-border">
+    <header>
+      <div class="brand">
+        <div class="logo">Y</div>
+        <div>
+          <div class="name">Your Name</div>
+          <div class="tag">Frontend Developer • UI enthusiast</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <button class="hamburger" aria-label="menu">☰</button>
+        <nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume" class="cta">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="intro">
+          <h1>Hi — I’m Your Name</h1>
+          <p class="muted">I build clean, accessible, and delightful interfaces. I love turning ideas into reality with HTML, CSS and JavaScript.</p>
+          <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
+            <span class="pill">HTML</span>
+            <span class="pill">CSS</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">Responsive Design</span>
+          </div>
+        </div>
+        <aside class="profile-card">
+          <img class="profile-img" src="https://picsum.photos/320/320" alt="Your Photo">
+          <h3 style="margin-top:12px;margin-bottom:6px">Your Name</h3>
+          <div class="muted">Frontend Developer</div>
+          <div style="margin-top:12px">
+            <a href="#contact" class="pill">Contact Me</a>
+          </div>
+        </aside>
+      </section>
+      <section id="about">
+        <h2>About</h2>
+        <div class="card" style="display:flex;gap:18px;align-items:center">
+          <img src="https://picsum.photos/200" alt="about" style="width:200px;height:200px;border-radius:12px;object-fit:cover">
+          <div>
+            <p>I am a passionate web developer who enjoys building user-friendly and accessible web experiences. I have experience in building responsive layouts, working with design systems, and using modern JavaScript to create interactive UIs.</p>
+            <ul style="margin-top:12px;color:var(--muted)">
+              <li>Location: Your City, Country</li>
+              <li>Education: Your degree / college</li>
+              <li>Availability: Open to work / freelancing</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="grid-3">
+          <div class="card">
+            <h4>Frontend</h4>
+            <p class="muted">HTML, CSS, Flexbox, Grid, Responsive Design</p>
+          </div>
+          <div class="card">
+            <h4>JavaScript</h4>
+            <p class="muted">ES6+, DOM, Fetch API, Async/Await</p>
+          </div>
+          <div class="card">
+            <h4>Tools</h4>
+            <p class="muted">Git, VS Code, Chrome DevTools, Figma</p>
+          </div>
+        </div>
+      </section>
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <article class="card">
+            <img class="project-img" src="https://picsum.photos/800/400" alt="project1">
+            <h3 style="margin-top:10px">Project Title One</h3>
+            <p class="muted">Short description of the project, the problem it solved and the technologies used.</p>
+            <div style="margin-top:10px"><a href="https://example.com" class="pill">View Demo</a></div>
+          </article>
+          <article class="card">
+            <img class="project-img" src="https://picsum.photos/801/400" alt="project2">
+            <h3 style="margin-top:10px">Project Title Two</h3>
+            <p class="muted">Short description of the project, your role and the stack used.</p>
+            <div style="margin-top:10px"><a href="https://github.com" class="pill">View Code</a></div>
+          </article>
+        </div>
+      </section>
+      <section id="resume">
+        <h2>Resume</h2>
+        <div class="card" style="display:flex;align-items:center;justify-content:space-between">
+          <div>
+            <p class="muted">Download my resume (PDF)</p>
+            <p style="margin-top:6px">Experienced frontend dev with a focus on accessible and responsive design.</p>
+          </div>
+          <a href="https://example.com/resume.pdf" class="pill">Download Resume</a>
+        </div>
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-grid">
+          <div>
+            <div class="card">
+              <h4>Get in touch</h4>
+              <p class="muted">Email: <a href="mailto:you@example.com">you@example.com</a></p>
+              <p class="muted">Phone: +91 98765 43210</p>
+              <p class="muted">LinkedIn: <a href="https://linkedin.com">your-link</a></p>
+            </div>
+            <div style="margin-top:12px" class="card">
+              <h4>Quick message</h4>
+              <form onsubmit="event.preventDefault();alert('Message sent (demo)');">
+                <input placeholder="Your name" required>
+                <input type="email" placeholder="Your email" required>
+                <textarea rows="5" placeholder="Message" required></textarea>
+                <button type="submit">Send</button>
+              </form>
+            </div>
+          </div>
+          <aside class="card">
+            <h4>Location</h4>
+            <p class="muted">Your City, Country</p>
+            <div style="height:220px;background:#f8fafc;border-radius:10px;margin-top:12px;display:grid;place-items:center;color:var(--muted)">Map placeholder</div>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="muted">© <span id="year"></span> Your Name. All rights reserved.</div>
+      <div class="muted">Designed with ❤️ — Demo</div>
+    </footer>
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelector('.hamburger').addEventListener('click', ()=>{
+      const nav = document.querySelector('nav ul');
+      if(nav.style.display === 'flex') nav.style.display = 'none';
+      else nav.style.display = 'flex';
+    });
+  </script>
+</body>
+</html>
